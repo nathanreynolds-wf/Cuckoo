@@ -38,7 +38,7 @@ public class MockManager {
     
     private let queue = DispatchQueue(label: "cuckoo-mockmanager")
 
-    public init(hasParent: Bool) {
+    @objc dynamic public init(hasParent: Bool) {
         self.hasParent = hasParent
     }
 
@@ -257,7 +257,7 @@ public class MockManager {
         isDefaultImplementationEnabled = true
     }
     
-    func reset() {
+    public func reset() {
         clearStubs()
         clearInvocations()
     }
